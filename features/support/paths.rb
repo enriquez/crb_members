@@ -16,6 +16,13 @@ module NavigationHelpers
       login_path
     when /the logout page/
       logout_path
+    when /the new project page for user "(.*)"/
+      user = User.find_by_username($1)
+      new_user_project_path(user)
+    when /the projects page for user "(.*)"/
+      user = User.find_by_username($1)
+      user_projects_path(user)
+     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
