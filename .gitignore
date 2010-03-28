@@ -4,3 +4,4 @@ tmp/**/*
 tmp/**
 log/*
 public/system/**
+rerun.txt

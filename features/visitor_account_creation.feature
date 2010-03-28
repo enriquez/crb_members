@@ -9,8 +9,8 @@ Feature: Visitor Account Creation
 		And I press "Sign Up"
 		Then I should see "Welcome to CRB! Happy coding!"
 		
-	Scenario: sign in
-		Given I am on the sign in page
+	Scenario: login
+		Given I am on the login page
     And the following user exists:
       | username | password |
       | cashby   | password |
