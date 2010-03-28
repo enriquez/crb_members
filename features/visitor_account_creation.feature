@@ -10,9 +10,16 @@ Feature: Visitor Account Creation
 		Then I should see "Welcome to CRB! Happy coding!"
 		
 	Scenario: login
-		Given I am on the login page
-    And the following user exists:
+    Given the following user exists:
       | username | password |
       | cashby   | password |
     When I sign in as "cashby" with password "password"
 		Then I should see "You are logged in as cashby"
+
+  Scenario: logout
+    Given the following user exists:
+      | username | password |
+      | cashby   | password |
+    And I sign in as "cashby" with password "password"
+    When I am on the logout page
+    Then I should see "Logout successful!"

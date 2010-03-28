@@ -6,6 +6,7 @@ When /^I fill in the sign up form$/ do
 end
 
 When /^I sign in as "([^\"]*)" with password "([^\"]*)"$/ do |username, password|
+  visit login_path
   fill_in "Username", :with => username
   fill_in "Password", :with => password
   click_button "Sign In"
