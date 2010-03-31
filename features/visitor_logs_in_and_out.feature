@@ -17,4 +17,3 @@ Feature: visitor logs in and out
     When I am on the logout page
     Then I should see "Logout successful!"
 
-
